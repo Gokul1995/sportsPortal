@@ -1,0 +1,142 @@
+<div ng-controller="HomeController">
+
+    {{news.content}}
+
+    <div class="ui three stackable cards">
+        <div class="card">
+
+            <div class="image">
+                <img src="/views/assets/all-sports-1.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/views/assets/f.jfif">
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/views/assets/football.jfif">
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/views/assets/Nepali-team.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/views/assets/saff_Draw.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/views/assets/football.jfif">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- New Design -->
+
+    <div class="ui special cards">
+        <div class="card">
+            <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                    <div class="content">
+                        <div class="center">
+                            <div class="ui inverted button">Add Friend</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/football.jfif">
+            </div>
+            <div class="content">
+                <a class="header">Team Fu</a>
+                <div class="meta">
+                    <span class="date">Created in Sep 2014</span>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="users icon"></i>
+                    2 Members
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="blurring dimmable image">
+                <div class="ui inverted dimmer">
+                    <div class="content">
+                        <div class="center">
+                            <div class="ui primary button">Add Friend</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/views/assets/Nepali-team.jpg">
+            </div>
+            <div class="content">
+                <a class="header">Team Hess</a>
+                <div class="meta">
+                    <span class="date">Created in Aug 2014</span>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="users icon"></i>
+                    2 Members
+                </a>
+            </div>
+        </div>
+    </div>
+<!-- Dynamic and working tiles of the news. -->
+    <div class="ui card" id="testModal" data-toggle="modal" data-target="#myModal" ng-click="showNews(new)" ng-repeat="new in news">
+        <div class="content">
+            <div class="header">{{new.title}}</div>
+            <div class="meta">{{new.subTitle}}</div>
+            <div class="description">
+                <p>
+                    {{new.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui card" data-toggle="modal" data-target="#myModal">
+        <a href="#" class="ui medium image">
+            <img src="/views/assets/Nepali-team.jpg">
+            <h1>
+                Here comes the team
+            </h1>
+            <h3>
+                The Nepali team with the caption ..........
+            </h3>
+        </a>
+    </div>
+<!-- Below is the news modal -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">{{modalTitle}}</h4>
+                        <h5>{{modalSubtitle}}</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{modalContent}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- News Modal ends here. -->
+</div>
