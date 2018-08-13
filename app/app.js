@@ -15,6 +15,9 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
         .when('/contact', {
             templateUrl: './contact.html'
         })
+        .when('/about', {
+            template: "<p>This is te chnage</p>"
+        })
         .otherwise({
             redirectTo: '/home'
         })
