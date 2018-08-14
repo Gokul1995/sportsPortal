@@ -18,6 +18,9 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
         .when('/about', {
             template: "<p>This is te chnage</p>"
         })
+        .when('/login', {
+            template: "<div>Login page</div>"
+        })
         .otherwise({
             redirectTo: '/home'
         })
