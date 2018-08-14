@@ -19,7 +19,7 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             template: "<p>This is te chnage</p>"
         })
         .when('/login', {
-            template: "<div>Login page</div>"
+            template: "<div>Login page. Login validation.</div>"
         })
         .otherwise({
             redirectTo: '/home'
